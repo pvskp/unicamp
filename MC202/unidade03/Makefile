@@ -1,12 +1,14 @@
 CFFLAGS: -std=99	-Wall	-Werror
 
+# LDFLAGS: -lm
+
 .PHONY: all clean
 
-all: calcular_matriz_transposta
+all: calcular_determinante
 
-calcular_matriz_transposta: calcular_matriz_transposta.c
-	gcc $(CFFLAGS) calcular_matriz_transposta.c -o calcular_matriz_transposta 
+calcular_determinante: calcular_determinante.c
+	gcc $(CFFLAGS) calcular_determinante.c -o calcular_determinante
 
 clean:
-	rm -f calcular_matriz_transposta
+	rm -f calcular_determinante
 
