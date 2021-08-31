@@ -30,8 +30,8 @@ float calcula_determinante(int matriz[][MAX], int n)
             {
                 if (k == 0)
                 {
-                    d_a = matriz[k + 1][l] * matriz[k + n-1][l + 1];
-                    d_b = matriz[k + 1][l + 1] * matriz[k + n-1][l];
+                    d_a = matriz[k + 1][l] * matriz[k + (n - 1)][l + 1];
+                    d_b = matriz[k + 1][l + 1] * matriz[k + (n - 1)][l];
                 }
                 else if (k == 1)
                 {
@@ -40,8 +40,8 @@ float calcula_determinante(int matriz[][MAX], int n)
                 }
                 else
                 {
-                    d_a = matriz[k - n-1][l] * matriz[k - 1][l + 1];
-                    d_b = matriz[k - n-1][l + 1] * matriz[k - 1][l];
+                    d_a = matriz[k - (n - 1)][l] * matriz[k - 1][l + 1];
+                    d_b = matriz[k - (n - 1)][l + 1] * matriz[k - 1][l];
                 }
                 cofator = value * (d_a - d_b);
             }
