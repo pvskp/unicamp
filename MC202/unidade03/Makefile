@@ -2,11 +2,11 @@ CFFLAGS: -std=99	-Wall	-Werror
 
 .PHONY: all clean
 
-all: identificar_matriz_simetrica
+all: calcular_matriz_transposta
 
-identificar_matriz_simetrica: identificar_matriz_simetrica.c
-	gcc $(CFFLAGS) identificar_matriz_simetrica.c -o identificar_matriz_simetrica 
+calcular_matriz_transposta: calcular_matriz_transposta.c
+	gcc $(CFFLAGS) calcular_matriz_transposta.c -o calcular_matriz_transposta 
 
 clean:
-	rm -f identificar_matriz_simetrica
+	rm -f calcular_matriz_transposta
 
